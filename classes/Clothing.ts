@@ -47,47 +47,47 @@ export abstract class Clothing implements OnlineShopping {
   }
 
   // maybe we can create a separate class that stores this info instead
-  createAccount(): string {
+  public createAccount(): string {
     return 'User has created an account!';
   }
 
   // like an account class
-  login(): string {
+  public login(): string {
     return 'User has logged in.';
   }
 
   // can have two properties: userName and userPassword
-  logout(): string {
+  public logout(): string {
     return 'User has logged out.';
   }
 
   // like login will check if user and pass match from createAccount
 
-  browseProducts(): string {
+  public browseSimilarProducts(): string {
     return 'These are the available items for sale...';
   }
 
-  notifyShip(): string {
+  public notifyShip(): string {
     return 'Your order has been shipped';
   }
 
-  notifyRestock(): string {
+  public notifyRestock(): string {
     return 'This product has been restocked.';
   }
 
-  getDiscountPrice(discount: number): number {
+  public getDiscountPrice(discount: number): number {
     return this._retailPrice - (this._retailPrice * discount);
   }
 
-  placeOrder(): string {
+  public placeOrder(): string {
     return 'Order has been placed';
   }
 
-  writeReview(): string {
+  public writeReview(): string {
     return 'User has written a review';
   }
 
-  getDescription(): string {
-    return `${this._productName} with size ${this._size}, color ${this._color}, and material of ${this._material} of the ${this._brand} with a price of ${this._retailPrice}.`;
+  public getDescription(): string {
+    return `${this._productName} with size ${this._size}, color ${this._color}, and material of ${this._material} of ${this._brand} with a price of ${this._retailPrice}.`;
   }
 }
