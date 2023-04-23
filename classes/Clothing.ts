@@ -63,7 +63,7 @@ export abstract class Clothing implements OnlineShopping {
 
   // like login will check if user and pass match from createAccount
 
-  public browseProducts(): string {
+  public browseSimilarProducts(): string {
     return 'These are the available items for sale...';
   }
 
@@ -88,6 +88,6 @@ export abstract class Clothing implements OnlineShopping {
   }
 
   public getDescription(): string {
-    return `${this._productName} with size ${this._size}, color ${this._color}, and material of ${this._material} of the ${this._brand} with a price of ${this._retailPrice}.`;
+    return `${this._productName} with size ${this._size}, color ${this._color}, and material of ${this._material} of ${this._brand} with a price of ${this._retailPrice}.`;
   }
 }
